@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEATRO-UNA | Reserva de Asientos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">🎭</div>
+        <div>
+          <h1>TEATRO-UNA</h1>
+          <p>Sala principal · Reserva de asientos</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Programación</a>
+        <a href="#">Reservas</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="main-layout">
+      <section class="theater-panel">
+        <div class="panel-head">
+          <h2>Plano de selección</h2>
+          <p>Seleccione sus asientos disponibles</p>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-seat available"></span>
+            <span>Disponible</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-seat occupied"></span>
+            <span>Ocupado</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-seat selected"></span>
+            <span>Seleccionado</span>
+          </div>
+        </div>
+
+        <div class="theater-wrapper">
+          <div class="theater-octagon" id="seat-map">
+            <!-- bloque central -->
+            <div class="seat-block center-block">
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="C1" data-row="C" data-number="1" data-status="available">C1</button>
+                <button class="seat available" type="button" data-seat="C2" data-row="C" data-number="2" data-status="available">C2</button>
+                <button class="seat available" type="button" data-seat="C3" data-row="C" data-number="3" data-status="available">C3</button>
+                <button class="seat available" type="button" data-seat="C4" data-row="C" data-number="4" data-status="available">C4</button>
+                <button class="seat available" type="button" data-seat="C5" data-row="C" data-number="5" data-status="available">C5</button>
+                <button class="seat available" type="button" data-seat="C6" data-row="C" data-number="6" data-status="available">C6</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="C7" data-row="C" data-number="7" data-status="available">C7</button>
+                <button class="seat available" type="button" data-seat="C8" data-row="C" data-number="8" data-status="available">C8</button>
+                <button class="seat available" type="button" data-seat="C9" data-row="C" data-number="9" data-status="available">C9</button>
+                <button class="seat available" type="button" data-seat="C10" data-row="C" data-number="10" data-status="available">C10</button>
+                <button class="seat available" type="button" data-seat="C11" data-row="C" data-number="11" data-status="available">C11</button>
+                <button class="seat available" type="button" data-seat="C12" data-row="C" data-number="12" data-status="available">C12</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="C13" data-row="C" data-number="13" data-status="available">C13</button>
+                <button class="seat available" type="button" data-seat="C14" data-row="C" data-number="14" data-status="available">C14</button>
+                <button class="seat available" type="button" data-seat="C15" data-row="C" data-number="15" data-status="available">C15</button>
+                <button class="seat available" type="button" data-seat="C16" data-row="C" data-number="16" data-status="available">C16</button>
+                <button class="seat available" type="button" data-seat="C17" data-row="C" data-number="17" data-status="available">C17</button>
+                <button class="seat available" type="button" data-seat="C18" data-row="C" data-number="18" data-status="available">C18</button>
+              </div>
+            </div>
+
+            <!-- bloque superior izquierdo -->
+            <div class="seat-block left-block">
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="L1" data-row="L" data-number="1" data-status="available">L1</button>
+                <button class="seat available" type="button" data-seat="L2" data-row="L" data-number="2" data-status="available">L2</button>
+                <button class="seat available" type="button" data-seat="L3" data-row="L" data-number="3" data-status="available">L3</button>
+                <button class="seat available" type="button" data-seat="L4" data-row="L" data-number="4" data-status="available">L4</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="L5" data-row="L" data-number="5" data-status="available">L5</button>
+                <button class="seat available" type="button" data-seat="L6" data-row="L" data-number="6" data-status="available">L6</button>
+                <button class="seat available" type="button" data-seat="L7" data-row="L" data-number="7" data-status="available">L7</button>
+                <button class="seat available" type="button" data-seat="L8" data-row="L" data-number="8" data-status="available">L8</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="L9" data-row="L" data-number="9" data-status="available">L9</button>
+                <button class="seat available" type="button" data-seat="L10" data-row="L" data-number="10" data-status="available">L10</button>
+                <button class="seat available" type="button" data-seat="L11" data-row="L" data-number="11" data-status="available">L11</button>
+                <button class="seat available" type="button" data-seat="L12" data-row="L" data-number="12" data-status="available">L12</button>
+              </div>
+            </div>
+
+            <!-- bloque superior derecho -->
+            <div class="seat-block right-block">
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="R1" data-row="R" data-number="1" data-status="available">R1</button>
+                <button class="seat available" type="button" data-seat="R2" data-row="R" data-number="2" data-status="available">R2</button>
+                <button class="seat available" type="button" data-seat="R3" data-row="R" data-number="3" data-status="available">R3</button>
+                <button class="seat available" type="button" data-seat="R4" data-row="R" data-number="4" data-status="available">R4</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="R5" data-row="R" data-number="5" data-status="available">R5</button>
+                <button class="seat available" type="button" data-seat="R6" data-row="R" data-number="6" data-status="available">R6</button>
+                <button class="seat available" type="button" data-seat="R7" data-row="R" data-number="7" data-status="available">R7</button>
+                <button class="seat available" type="button" data-seat="R8" data-row="R" data-number="8" data-status="available">R8</button>
+              </div>
+
+              <div class="seat-row">
+                <button class="seat available" type="button" data-seat="R9" data-row="R" data-number="9" data-status="available">R9</button>
+                <button class="seat available" type="button" data-seat="R10" data-row="R" data-number="10" data-status="available">R10</button>
+                <button class="seat available" type="button" data-seat="R11" data-row="R" data-number="11" data-status="available">R11</button>
+                <button class="seat available" type="button" data-seat="R12" data-row="R" data-number="12" data-status="available">R12</button>
+              </div>
+            </div>
+
+            <div class="center-gap" aria-hidden="true"></div>
+
+            <div class="stage-area" id="stage">
+              <div class="stage-glow"></div>              <div class="stage-curtain"></div>
+              <div class="stage-content">
+                <span>ESCENARIO PRINCIPAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="reservation-panel">
+        <div class="panel-head small">
+          <h2>Reserva</h2>
+          <p>Formulario preparado para JavaScript</p>
+        </div>
+
+        <form id="reservation-form" class="reservation-form">
+          <div class="form-group">
+            <label for="customer-name">Nombre completo</label>
+            <input
+              type="text"
+              id="customer-name"
+              name="customer-name"
+              placeholder="Ingrese su nombre"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="seat-quantity">Cantidad de asientos</label>
+            <select id="seat-quantity" name="seat-quantity">
+              <option value="">Seleccione una cantidad</option>
+              <option value="1">1 asiento</option>
+              <option value="2">2 asientos</option>
+              <option value="3">3 asientos</option>
+              <option value="4">4 asientos</option>
+              <option value="5">5 asientos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="selected-seats">Asientos seleccionados</label>
+            <input
+              type="text"
+              id="selected-seats"
+              name="selected-seats"
+              placeholder="Se completará al hacer clic"
+              readonly
+            />
+          </div>
+
+          <div class="summary-box" id="reservation-summary">
+            <p><strong>Total seleccionados:</strong> <span id="selected-count">0</span></p>
+            <p><strong>Estado:</strong> Pendiente</p>
+          </div>
+
+          <button type="submit" class="reserve-btn" id="confirm-reservation">
+            Confirmar reserva
+          </button>
+        </form>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-info">
+        <h3>TEATRO-UNA</h3>
+        <p>Dirección: Universidad Nacional, Sede Regional</p>
+        <p>Teléfono: +506 2222-2222</p>
+        <p>Correo electrónico: teatro-una@una.ac.cr</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-overlay" id="custom-modal">
+  <div class="custom-modal">
+    <div class="custom-modal-header">
+      <h3 id="modal-title">Mensaje</h3>
+      <button type="button" class="modal-close" id="modal-close-btn">&times;</button>
+    </div>
+
+    <div class="custom-modal-body">
+      <p id="modal-message">Contenido del mensaje</p>
+    </div>
+
+    <div class="custom-modal-footer">
+      <button type="button" class="modal-btn" id="modal-accept-btn">Aceptar</button>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
